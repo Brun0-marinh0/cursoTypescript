@@ -49,3 +49,6 @@ let cart: object
 cart = {
     key: 'fi'
 }
+
+// Type Interface
+let message2 = "mensagem definida"
