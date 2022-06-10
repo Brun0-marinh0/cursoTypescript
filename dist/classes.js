@@ -14,6 +14,13 @@ class CharAccount extends UserAccount {
         this.nickname = nickname;
         this.level = level;
     }
+    get getLevel() {
+        console.log('------get------');
+        return this.level;
+    }
+    set setLevel(level) {
+        this.level = level;
+    }
     logCharDetails() {
         console.log(`my nickname is ${this.nickname}`);
     }
@@ -24,3 +31,5 @@ const jkl = new CharAccount("JKL_br_", 12, "Bruno Marinho", 22);
 jkl.logDetails();
 jkl.logCharDetails();
 console.log(jkl.level);
+jkl.setLevel = 999;
+console.log(jkl.getLevel);

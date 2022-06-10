@@ -1,6 +1,6 @@
 class UserAccount {
-    name: string;
-    age: number;
+    public name: string;
+    protected age: number;
 
     constructor(name: string, age: number){
         this.name = name
@@ -13,7 +13,7 @@ class UserAccount {
 }
 class CharAccount extends UserAccount{
     private nickname: string
-    readonly level: number
+    level: number
 
     constructor(nickname: string, level: number, name: string, age: number){
         super(name, age)
@@ -22,6 +22,14 @@ class CharAccount extends UserAccount{
         this.level = level
     }
 
+    get getLevel(){
+        console.log('------get------')
+        return this.level
+    }
+
+    set setLevel(level:number){
+        this.level = level
+    }
     logCharDetails():void{
         console.log(`my nickname is ${this.nickname}`)
     }
@@ -35,4 +43,7 @@ const jkl = new CharAccount("JKL_br_", 12, "Bruno Marinho", 22)
 jkl.logDetails()
 jkl.logCharDetails()
 console.log(jkl.level)
+
+jkl.setLevel = 999
+console.log(jkl.getLevel)
 
