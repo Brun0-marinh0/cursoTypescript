@@ -8,4 +8,15 @@ const tlou = {
         console.log(`Similar games to ${title}: DarkSouls`);
     },
 };
-tlou.getSimilars(tlou.title);
+console.log(tlou.genre);
+if (tlou.getSimilars) {
+    tlou.getSimilars(tlou.title);
+}
+const leftbehind = {
+    title: "elden ring - part2",
+    description: "dead dead end dead",
+    genre: "RPG SoulsLike",
+    platform: ["ps4"],
+    originalGame: tlou,
+    newContent: ["3 hours story"]
+};
